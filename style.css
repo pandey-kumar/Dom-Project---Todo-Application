@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+:root{
+    --body-background:#00f81d85;
+    --btn-primary:#5cabff;
+    --btn-background:rgba(225, 255, 0, 0.598);
+    --btn-active:rgba(0, 251, 255, 0.518);
+    --btn-edit:rgba(29, 13, 253, 0.47);
+    --btn-delete:rgba(255, 6, 27, 0.45);
+    --btn-completed:rgba(255, 0, 200, 0.525);
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-background);
+    font-family: "Afacad Flux", sans-serif;
+
+}
+
+.container{
+    background-color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1.235);
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+h1{
+    text-align: center;
+
+}
+
+#todoInput{
+    width: 75%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+#addTodo{
+    padding:10px 20px;
+    background-color:var(--btn-primary);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.8s ease-in-out;
+    &:hover{
+        background-color:blueviolet;
+    }
+}
+
+ul{
+    list-style-type:none; 
+    padding: 0;
+}
+li{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    &:hover{
+        background-color:rgba(0, 132, 255, 0.244);
+    }
+}
+li:last-child{
+    border-bottom: none;
+}
+
+.filterbtn,.editBtn,.deleteBtn,.completedBtn{
+    margin: 15px 5px 0px 0px;
+    padding: 10px 20px;
+    background-color: var(--btn-background);
+    border: none;
+    font-weight:bolder;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.8s;
+    &:hover{
+        background-color:var(--btn-active);
+    }
+
+}
+
+.editBtn{
+    background-color:var(--btn-edit);
+    &:hover{
+        background-color:rgba(25, 25, 255, 0.827);
+    }
+ 
+}
+.deleteBtn{
+    background-color:var(--btn-delete);
+     &:hover{
+        background-color:rgb(255, 0, 0);
+    }
+}
+.completedBtn{
+    background-color:var(--btn-completed);
+     &:hover{
+        background-color:rgba(188, 0, 160, 0.884);
+    }
+}
+
+.todoItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.completed{
+    text-decoration: line-through;
+}
